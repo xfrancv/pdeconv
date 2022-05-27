@@ -18,7 +18,7 @@ Therefore the sparse counters are numbers generated from random variables each a
 
 Given distributions of dense counters $P\in[0,1]^{(X+1)\times N}$, the distributions of the sparse counters $Q\in[0,1]^{(Y+1)\times (N-W+1)}$ can be computed by 
 
-$$ q_i(y) = \sum_{x_i=0}^X \sum_{x_{i+1}=0}^X\cdots\sum_{x_{i+W-1}=0}^X p_i(x_i)\,p_{i+1}(x_{i+1})\cdots p_{i+W-1}(x_{i+W-1})\, \delta(x_i+x_{i+1}+\cdots +x_{i+W-1}=y) $$
+$$ q_i(y) = \sum_{x_i=0}^X \sum_{x_{i+1}=0}^X\cdots\sum_{x_{i+W-1}=0}^X p_i(x_i)p_{i+1}(x_{i+1})\cdots p_{i+W-1}(x_{i+W-1}) \delta(x_i+x_{i+1}+\cdots +x_{i+W-1}=y) $$
 
 where $\delta(A)=1$ if $A$ is true and $0$ otherwise. The operation is referred to as the probabilistic convolution with window size $W$.
 
