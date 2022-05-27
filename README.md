@@ -4,7 +4,7 @@ The library implements probabilistic convolution and deconvolution on a sequence
 
 
 
-##Sequence Of Independent Counters
+## Sequence Of Independent Counters
 
 Let $\{x_0,x_1,\ldots,x_{N-1}\}$ be a sequence of $N$ numbers, referred to as dense counters, that are generated from independent random variables each attaining value from a finite set $\{0,1,\ldots,X\}$, however, each having a different distribution $p_i(x)$, $i=0,\ldots,N-1$. Let $P\in[0,1]^{(X+1)\times N}$ be a left stochastic matrix whose columns represent the distributions $p_i(x)$, $i=0,1,\ldots,N-1$.
 
@@ -14,7 +14,7 @@ $$ y_i = \sum_{k=i}^{i+W-1} x_k\,, \qquad i=0,\ldots,N-W\:. $$
 
 Therefore the sparse counters are numbers generated from random variables each attaining value from finite set $\{0,1,\ldots,Y\}$, where $Y=X\cdot W$, and having distributions $q_i(y)$, $i=0,\ldots,N-W$. Let $Q\in[0,1]^{(Y+1)\times (N-W+1)}$ be a left stochastic matrix whose columns represent the distributions $q_i(y)$, $i=0,1,\ldots,N-W$.
 
-##Probabilistic convolution
+## Probabilistic convolution
 
 Given distributions of dense counters $P\in[0,1]^{(X+1)\times N}$, the distributions of the sparse counters $Q\in[0,1]^{(Y+1)\times (N-W+1)}$ can be computed by 
 
@@ -22,7 +22,7 @@ $$ q_i(y) = \sum_{x_i=0}^X \sum_{x_{i+1}=0}^X\cdots\sum_{x_{i+W-1}=0}^X p_i(x_i)
 
 where $\delta(A)=1$ if $A$ is true and $0$ otherwise. The operation is referred to as the probabilistic convolution with window size $W$.
 
-##Probabilistic deconvolution
+## Probabilistic deconvolution
 
 Given a left stochastic matrix $Q\in [0,1]^{(Y+1)\times (N-W+1)}$, the tasks is to find distributions of dense counters $\hat{P}\in[0,1]^{(X+1)\times N}$ such that the distribution of sparse counters $\hat{Q}$ computed from $\hat{P}$ by the probabilistic deconvolution minimizes the Kullback-Leibler divergence
 
